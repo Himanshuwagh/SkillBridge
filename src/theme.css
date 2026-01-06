@@ -1,0 +1,207 @@
+/* Modern Design System - SkillBridge */
+
+:root {
+  /* Black, Grey, White Color Palette */
+  --primary: #000000;
+  --primary-dark: #1a1a1a;
+  --primary-light: #404040;
+  --secondary: #4a4a4a;
+  --accent: #6b6b6b;
+  
+  /* Gradients - Subtle grey gradients */
+  --gradient-primary: linear-gradient(135deg, #000000 0%, #2a2a2a 50%, #4a4a4a 100%);
+  --gradient-secondary: linear-gradient(135deg, #1a1a1a 0%, #3a3a3a 100%);
+  --gradient-card: linear-gradient(135deg, #ffffff 0%, #fafafa 100%);
+  
+  /* Neutrals - Black, Grey, White */
+  --bg-primary: #ffffff;
+  --bg-secondary: #ffffff;
+  --bg-tertiary: #f5f5f5;
+  --bg-dark: #1a1a1a;
+  --text-primary: #000000;
+  --text-secondary: #4a4a4a;
+  --text-tertiary: #8a8a8a;
+  --border: #e0e0e0;
+  --border-light: #f0f0f0;
+  --border-dark: #2a2a2a;
+  
+  /* Professional Color Palette */
+  --color-blue: #2563eb;
+  --color-blue-light: #dbeafe;
+  --color-blue-dark: #1e40af;
+  --color-teal: #0d9488;
+  --color-teal-light: #ccfbf1;
+  --color-teal-dark: #0f766e;
+  --color-indigo: #6366f1;
+  --color-indigo-light: #e0e7ff;
+  --color-indigo-dark: #4f46e5;
+  --color-purple: #7c3aed;
+  --color-purple-light: #ede9fe;
+  --color-purple-dark: #6d28d9;
+  --color-emerald: #10b981;
+  --color-emerald-light: #d1fae5;
+  --color-emerald-dark: #059669;
+  --color-amber: #f59e0b;
+  --color-amber-light: #fef3c7;
+  --color-amber-dark: #d97706;
+  --color-rose: #e11d48;
+  --color-rose-light: #ffe4e6;
+  --color-rose-dark: #be123c;
+  
+  /* Status Colors */
+  --success: var(--color-emerald);
+  --success-light: var(--color-emerald-light);
+  --success-dark: var(--color-emerald-dark);
+  --warning: var(--color-amber);
+  --warning-light: var(--color-amber-light);
+  --warning-dark: var(--color-amber-dark);
+  --error: var(--color-rose);
+  --error-light: var(--color-rose-light);
+  --error-dark: var(--color-rose-dark);
+  --info: var(--color-blue);
+  --info-light: var(--color-blue-light);
+  --info-dark: var(--color-blue-dark);
+  
+  /* Label Colors */
+  --label-primary: var(--color-blue);
+  --label-secondary: var(--color-teal);
+  --label-accent: var(--color-indigo);
+  --label-highlight: var(--color-purple);
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --shadow-xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  
+  /* Spacing */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 3rem;
+  
+  /* Border Radius */
+  --radius-sm: 6px;
+  --radius: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+  
+  /* Transitions */
+  --transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+/* Modern Button Styles */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.625rem 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: var(--transition);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: white;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--primary);
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: var(--primary-dark);
+  border-color: var(--primary-dark);
+}
+
+.btn-primary:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-secondary {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  border: 1px solid var(--border);
+}
+
+.btn-secondary:hover:not(:disabled) {
+  background: var(--bg-tertiary);
+  border-color: var(--primary);
+}
+
+/* Modern Card Styles */
+.card {
+  background: var(--bg-secondary);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border-light);
+  transition: var(--transition);
+}
+
+.card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+/* Modern Input Styles */
+input, textarea, select {
+  padding: 0.625rem 0.875rem;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  font-size: 0.875rem;
+  transition: var(--transition);
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.05);
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-tertiary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-tertiary);
+}
+

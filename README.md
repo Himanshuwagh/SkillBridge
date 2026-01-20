@@ -4,7 +4,7 @@
 [![License](https://img.shields.io/badge/license-MIT-blue)]()
 [![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen)]()
 
-A concise description: SkillBridge is a project that connects skills with opportunities, providing tooling and workflows to match, evaluate, and manage skill-based collaborations. (Replace this summary with a short sentence describing your project's purpose.)
+SkillBridge is a project that connects skills with opportunities, providing tooling and workflows to match, evaluate, and manage skill-based collaborations. 
 
 Table of contents
 - [Features](#features)
